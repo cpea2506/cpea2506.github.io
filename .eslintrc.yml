@@ -1,0 +1,9 @@
+extends:
+  - eslint:recommended
+parser: "@typescript-eslint/parser"
+overrides:
+  - { 
+      files: "*tsx", 
+      rules:
+        {no-undef: off}
+    }
