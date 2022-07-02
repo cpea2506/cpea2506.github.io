@@ -12,7 +12,8 @@ export default function HomepageHeader() {
                 <h1 className="hero__title">{siteConfig.title}</h1>
                 <p className="hero__subtitle">
                     {siteConfig.tagline}
-                    <br />A Rustacean 🦀 who in love of learning languages.
+                    <br />
+                    A Rustacean 🦀 who in love of learning languages.
                 </p>
             </div>
         </header>

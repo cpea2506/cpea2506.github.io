@@ -8,10 +8,11 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
     title: "CPea's Journey",
     tagline: "🥜 I'm Captain JackSpearrow 🏴‍☠️",
-    url: "cpea2506.github.io",
+    url: "https://cpea2506.github.io/",
+    deploymentBranch: "gh-pages",
     baseUrl: "/",
-    deploymentBranch: "main",
     onBrokenLinks: "throw",
+    trailingSlash: false,
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
     organizationName: "cpea2506", // Usually your GitHub org/user name.
@@ -27,7 +28,7 @@ const config = {
                     editUrl: "https://github.com/cpea2506/cpea2506.github.io",
                 },
                 theme: {
-                    customCss: require.resolve("./src/css/custom.css"),
+                    customCss: require.resolve("./src/scss/custom.scss"),
                 },
             }),
         ],
@@ -62,19 +63,6 @@ const config = {
             colorMode: {
                 defaultMode: "dark",
                 disableSwitch: true,
-                respectPrefersColorScheme: true,
-                switchConfig: {
-                    darkIcon: "🌝",
-                    darkIconStyle: {
-                        marginLeft: "2px",
-                    },
-                    // Unicode icons such as '\u2600' will work
-                    // Unicode with 5 chars require brackets: '\u{1F602}'
-                    lightIcon: "😎",
-                    lightIconStyle: {
-                        marginLeft: "1px",
-                    },
-                },
             },
         }),
     plugins: ["docusaurus-plugin-sass"],
