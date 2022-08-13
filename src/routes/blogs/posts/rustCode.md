@@ -13,4 +13,3 @@ fn main() {
 - [ ] ~~SvelteKit~~
 - [x] **VS Code**
 - [x] Emojis 😎
-
