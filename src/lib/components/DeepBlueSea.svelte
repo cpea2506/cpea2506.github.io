@@ -1,0 +1,52 @@
+<svg
+  class="w-full h-60 max-h-screen"
+  viewBox="0 24 150 28"
+  preserveAspectRatio="none"
+>
+  <defs>
+    <path
+      id="gentle-wave"
+      d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z"
+    />
+  </defs>
+  <g class="parallax">
+    <use href="#gentle-wave" x="50" y="0" fill="#4579e2" />
+    <use href="#gentle-wave" x="50" y="3" fill="#3461c1" />
+    <use href="#gentle-wave" x="50" y="6" fill="#2d55aa" />
+  </g>
+</svg>
+
+<style lang="scss">
+  .parallax > use {
+    animation: move-forever 12s linear infinite;
+
+    &:nth-child(1) {
+      animation-delay: -2s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: -2s;
+      animation-duration: 5s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 3s;
+    }
+  }
+
+  @keyframes move-forever {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+</style>

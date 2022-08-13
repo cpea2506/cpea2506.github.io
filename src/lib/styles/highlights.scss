@@ -1,0 +1,34 @@
+.hljs-class .hljs-title,.hljs-class.hljs-title,
+.hljs-template-variable, .hljs-type, .hljs-variable,
+.hljs-built_in, .hljs-literal{
+    color: #61afef;
+}
+
+.hljs-deletion, .hljs-keyword, .hljs-tag .hljs-name, .hljs-tag.hljs-name, 
+.hljs-selector-tag, .hljs-symbol {
+    color: #e06c75;
+}
+
+.hljs-attribute, .hljs-addition, .hljs-tag .hljs-attr, .hljs-tag.hljs-attr, .hljs-name, .hljs-section, 
+.hljs-selector-class, .hljs-selector-id, .hljs-title, .hljs-bullet, .hljs-link, .hljs-meta,
+.hljs-meta .hljs-keyword, .hljs-meta.hljs-keyword, .hljs-selector-attr, .hljs-selector-pseudo,
+.hljs-subst, .hljs-attr, .css .hljs-selector-tag, .css.hljs-selector-tag, .hljs-selector-tag {
+    color: #98c379;
+}
+
+.hljs-doctag, .hljs-meta .hljs-meta-string, .hljs-meta.hljs-meta-string,
+.hljs-regexp, .hljs-string {
+    color: #e5c07b;
+}
+
+.hljs-number {
+    color: #c678dd;
+} 
+
+.hljs-comment {
+    color: #676e7b;
+}
+
+.hljs-meta  {
+    color: #56b6c2;
+}

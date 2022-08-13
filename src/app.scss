@@ -1,0 +1,55 @@
+@tailwind base;
+
+@layer base {
+  html {
+    @apply scroll-smooth text-[#abb2bf] bg-[#282c34];
+  }
+
+  pre {
+    @apply border border-black border-solid;
+  }
+
+  h1 {
+    @apply text-2xl font-bold;
+  }
+
+  a {
+    @apply no-underline;
+
+    &:hover {
+      @apply text-[#e06c75];
+    }
+  }
+
+  nav {
+    @apply bg-[#1e2024] text-[#d7d7ff] flex-items-center justify-between;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+  .post-card-border {
+    @apply border-b border-solid border-[#61afef];
+  }
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .flex-items-center {
+    @apply flex items-center;
+  }
+
+  .flex-justify-center {
+    @apply flex justify-center;
+  }
+}
