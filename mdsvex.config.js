@@ -1,25 +1,25 @@
-import { getHighlighter, loadTheme } from "shiki";
+import { getHighlighter } from "shiki";
 import { escapeSvelte } from "mdsvex";
 
-async function highlighter(code, lang) {
-  const highlighter = await getHighlighter({
-    theme: "github-dark-dimmed",
-  });
-
-  const html = highlighter.codeToHtml(code, { lang });
-
-  return `${escapeSvelte(html)}`;
-}
-
+/**
+ * @type {import("mdsvex").MdsvexOptions}
+ */
 const config = {
-  smartypants: true,
-  extensions: [".md"],
-  layout: {
-    blogs: "./src/routes/blogs/_post.svelte",
-  },
-  highlight: {
-    highlighter,
-  },
+    extensions: [".md"],
+    layout: {
+        blogs: "./src/routes/blogs/_post.svelte",
+    },
+    highlight: {
+        highlighter: async (code, lang) => {
+            const highlighter = await getHighlighter({
+                theme: "github-dark-dimmed",
+            });
+
+            const html = highlighter.codeToHtml(code, { lang });
+
+            return escapeSvelte(html);
+        },
+    },
 };
 
 export default config;

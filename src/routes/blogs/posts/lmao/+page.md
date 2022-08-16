@@ -8,7 +8,7 @@ date: 12/08/2022
 
 > A block quote.
 
-- Some _emphasis_, **importance**, and `code`
+-   Some _emphasis_, **importance**, and `code`
 
 ```
 code

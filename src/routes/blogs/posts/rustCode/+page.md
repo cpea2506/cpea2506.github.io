@@ -6,10 +6,10 @@ date: 12/08/2022
 
 ```rust
 fn main() {
-    println("Hello world")
+    println!("Hello world")
 }
 ```
 
-- [ ] ~~SvelteKit~~
-- [x] **VS Code**
-- [x] Emojis 😎
+-   [ ] ~~SvelteKit~~
+-   [x] **VS Code**
+-   [x] Emojis 😎
