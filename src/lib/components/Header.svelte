@@ -1,6 +1,16 @@
 <script lang="ts">
     import Icon from "svelte-icons-pack/Icon.svelte";
     import TiSocialGithubCircular from "svelte-icons-pack/ti/TiSocialGithubCircular";
+
+    let color = "#d7d7ff";
+
+    function handleIconMouseOver() {
+        color = "#e06c75";
+    }
+
+    function handleIconMouseOut() {
+        color = "#d7d7ff";
+    }
 </script>
 
 <nav class="h-[3.75rem] sticky top-0 z-[2] py-2 px-4">
@@ -16,9 +26,11 @@
         href="https://github.com/cpea2506"
         target="_blank"
         class="flex-items-center"
+        on:mouseover={handleIconMouseOver}
+        on:focus={handleIconMouseOver}
+        on:mouseout={handleIconMouseOut}
+        on:blur={handleIconMouseOut}
     >
-        <div class="w-10">
-            <Icon src={TiSocialGithubCircular} />
-        </div>
+        <Icon src={TiSocialGithubCircular} size="2em" title="Github" {color} />
     </a>
 </nav>
