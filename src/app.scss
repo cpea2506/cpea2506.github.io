@@ -9,6 +9,15 @@
         @apply border border-black border-solid;
     }
 
+    code {
+        @apply bg-[#22272e] p-1 rounded-sm;
+
+        &::before,
+        &::after {
+            content: none !important;
+        }
+    }
+
     h1 {
         @apply text-2xl font-bold;
     }
