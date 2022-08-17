@@ -11,7 +11,7 @@
         "lint": "prettier --check --plugin-search-dir=. . && eslint .",
         "format": "prettier --write --plugin-search-dir=. .",
         "stylelint": "stylelint **/*.{scss,svelte}",
-        "_deploy": "vite build && gh-pages -d build"
+        "_deploy": "pnpm build && gh-pages -d build -t"
     },
     "devDependencies": {
         "@sveltejs/adapter-static": "1.0.0-next.39",

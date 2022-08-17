@@ -8,9 +8,10 @@ import mdsvexConfig from "./mdsvex.config.js";
  */
 const config = {
     preprocess: [preprocess({ postcss: true }), mdsvex(mdsvexConfig)],
-    extensions: [".svelte", ".md"],
+    extensions: [".svelte", ...mdsvexConfig.extensions],
     kit: {
-        prerender: { enabled: true, default: true },
+        trailingSlash: "always",
+        prerender: { default: true },
         adapter: adapter(),
         alias: {
             $components: "./src/lib/components",
