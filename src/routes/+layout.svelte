@@ -2,7 +2,7 @@
     import "../app.scss";
     import type { LayoutData } from "./$types";
     import Header from "$components/Header.svelte";
-    import { fade } from "svelte/transition";
+    import PageTransition from "$components/PageTransition.svelte";
 
     export let data: LayoutData;
 
@@ -10,9 +10,6 @@
 </script>
 
 <Header />
-
-{#key currentRoute}
-    <main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
-        <slot />
-    </main>
-{/key}
+<PageTransition url={currentRoute}>
+    <slot />
+</PageTransition>

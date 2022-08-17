@@ -11,6 +11,6 @@
     <article class="p-[2vw] post-card-border">
         <h1 class="mb-2">{title}</h1>
         <p class="mb-2 text-[#abb2bf]">{description}</p>
-        <p class="text-[#98c379]">Published: {date}</p>
+        <p class="text-[#98c379]">Created: {date}</p>
     </article>
 </a>
