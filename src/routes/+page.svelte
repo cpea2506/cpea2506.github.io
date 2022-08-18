@@ -2,7 +2,7 @@
     import DeepBlueSea from "$components/DeepBlueSea.svelte";
 </script>
 
-<div class="flex-col-center max-w-6xl p-8">
+<div class="flex-col-center p-8">
     <img
         alt="Captain face"
         class="w-52 rounded-full"

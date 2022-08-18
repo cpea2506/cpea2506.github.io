@@ -14,10 +14,10 @@ const config = {
         prerender: { default: true },
         adapter: adapter(),
         alias: {
-            $components: "./src/lib/components",
-            $types: "./src/lib/types",
-            $styles: "./src/lib/styles",
-            $routes: "./src/routes",
+            $components: "src/lib/components",
+            $types: "src/lib/types",
+            $styles: "src/lib/styles",
+            $routes: "src/routes",
         },
     },
 };

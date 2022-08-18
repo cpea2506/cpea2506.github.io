@@ -7,12 +7,13 @@ import { escapeSvelte } from "mdsvex";
 const config = {
     extensions: [".md"],
     layout: {
-        blogs: "./src/routes/blogs/_post.svelte",
+        blogs: "src/routes/blogs/_post.svelte",
     },
     highlight: {
         highlighter: async (code, lang) => {
             const highlighter = await getHighlighter({
-                theme: "github-dark-dimmed",
+                theme: "one-monokai",
+                paths: "src/lib/styles/shiki",
             });
 
             const html = highlighter.codeToHtml(code, { lang });
