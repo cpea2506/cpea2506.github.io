@@ -6,11 +6,10 @@
         "build": "vite build",
         "package": "svelte-kit package",
         "preview": "vite preview",
-        "check": "svelte-check --tsconfig ./tsconfig.json",
-        "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-        "lint": "prettier --check --plugin-search-dir=. . && eslint .",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+        "lint": "prettier --check --plugin-search-dir=. . && eslint . && stylelint **/*.{scss,svelte}",
         "format": "prettier --write --plugin-search-dir=. .",
-        "stylelint": "stylelint **/*.{scss,svelte}",
         "_deploy": "pnpm build && gh-pages -d build -t"
     },
     "devDependencies": {
