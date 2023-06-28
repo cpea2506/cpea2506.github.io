@@ -2,44 +2,122 @@
 @tailwind utilities;
 @tailwind components;
 
-@layer base {
-    html {
-        @apply scroll-smooth text-[#abb2bf] bg-[#282c34];
+html {
+    @apply scroll-smooth overflow-x-hidden overflow-y-scroll text-white bg-black;
+}
+
+code {
+    @apply bg-black-200 p-1 rounded-sm;
+}
+
+h1 {
+    @apply text-2xl font-bold;
+}
+
+a {
+    @apply no-underline;
+
+    &:hover {
+        @apply text-red;
     }
+}
 
-    pre {
-        @apply border border-black border-solid;
-    }
+nav {
+    @apply bg-black-300/[.85] text-white flex-items-center justify-between;
+}
 
-    code {
-        @apply bg-[#22272e] p-1 rounded-sm;
+/* shiki */
 
-        &::before,
-        &::after {
-            content: none !important;
+pre {
+    &.shiki {
+        @apply px-0;
+
+        background-color: #282c34 !important;
+
+        &::before {
+            @apply sticky;
+        }
+
+        & > div.code-title {
+            @apply absolute -mt-10 ml-20 pt-1.5 pl-1.5 opacity-50;
+        }
+
+        & .language-id {
+            @apply hidden;
+        }
+
+        & > .code-container {
+            @apply overflow-auto;
+
+            /* custom scrollbar */
+            &::-webkit-scrollbar {
+                @apply w-5;
+            }
+
+            &::-webkit-scrollbar-track {
+                @apply bg-transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                @apply border-[4px] border-solid border-transparent rounded-[20px] bg-gray-100 bg-clip-content;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                @apply bg-gray;
+            }
+        }
+
+        &:not([text="true"], [svelte="true"])
+            > .code-container
+            > code
+            > div.line
+            > span:first-child {
+            @apply pl-5;
+        }
+
+        &:not([text="true"], [svelte="true"])
+            > .code-container
+            > code
+            > div.line
+            > span:last-child {
+            @apply pr-5;
+        }
+
+        & div.dim {
+            @apply opacity-50 transition-opacity;
+        }
+
+        &:hover div.dim {
+            @apply opacity-100;
+        }
+
+        & div.highlight::before {
+            @apply bg-yellow/20 absolute content-[''] w-full h-6;
         }
     }
 
-    h1 {
-        @apply text-2xl font-bold;
-    }
+    &.twoslash {
+        & data-lsp {
+            @apply border-b border-dashed border-transparent transition-all;
 
-    a {
-        @apply no-underline;
+            &:hover::before {
+                @apply content-[attr(lsp)] absolute rounded translate-y-5 bg-neutral-50 text-neutral-50 font-mono whitespace-pre-wrap transition-all px-2 py-1 z-50;
+            }
+        }
 
-        &:hover {
-            @apply text-[#e06c75];
+        &:hover data-lsp {
+            @apply border-neutral-50/30;
         }
     }
+}
 
-    nav {
-        @apply bg-[#1e2024] text-[#d7d7ff] flex-items-center justify-between;
-    }
+:is(pre.shiki[text="true"], pre.shiki[svelte="true"]) > div.code-container {
+    @apply mx-5;
 }
 
 @layer components {
     .post-card-border {
-        @apply border-b border-solid border-[#61afef];
+        @apply border-b border-solid border-blue;
     }
 }
 
