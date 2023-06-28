@@ -17,8 +17,8 @@ export const GET = async () => {
             const { metadata } = await resolver();
 
             // extract exact path: /blogs/posts/<name>
-            // safety: this cannot be null
-            const postPath = /(?<=\..\/..).+(?=\+page\.md)/.exec(path)!.at(0)!;
+            const regExecArray = /(?<=\..\/..).+(?=\+page\.md)/.exec(path);
+            const postPath = regExecArray?.at(0) ?? "";
 
             return { meta: metadata, path: postPath };
         }),

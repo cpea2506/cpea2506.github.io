@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind utilities;
+@tailwind components;
 
 @layer base {
     html {
@@ -35,15 +37,11 @@
     }
 }
 
-@tailwind components;
-
 @layer components {
     .post-card-border {
         @apply border-b border-solid border-[#61afef];
     }
 }
-
-@tailwind utilities;
 
 @layer utilities {
     .flex-center {

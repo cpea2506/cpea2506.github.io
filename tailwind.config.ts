@@ -1,12 +1,11 @@
-const typography = require("@tailwindcss/typography");
-/**
- * @type {import("tailwindcss").Config}
- */
-const config = {
+import typography from "@tailwindcss/typography";
+import type { Config } from "tailwindcss";
+
+const config: Config = {
     content: ["./src/**/*.{svelte, scss}"],
     theme: {
         extend: {
-            typography: (_) => ({
+            typography: () => ({
                 "one-monokai": {
                     css: {
                         "--tw-prose-body": "#abb2bf",
@@ -19,6 +18,15 @@ const config = {
                         "--tw-prose-headings": "#dedeff",
                         "--tw-prose-bullets": "#e06c75",
                         "--tw-prose-bold": "var(--tw-prose-body)",
+                        "ul:has(li):has(input[type='checkbox'])": {
+                            padding: 0,
+                        },
+                        "ul > li:has(input[type='checkbox'])": {
+                            listStyle: "none",
+                        },
+                        "ul > li:has(input[type='checkbox']) ul li": {
+                            paddingLeft: 30,
+                        },
                     },
                 },
             }),
@@ -27,4 +35,4 @@ const config = {
     plugins: [typography],
 };
 
-module.exports = config;
+export default config;
