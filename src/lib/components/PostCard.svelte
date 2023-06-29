@@ -5,7 +5,7 @@
     $: ({ title, description, date } = meta);
 </script>
 
-<a href={path} class="text-yellow">
+<a href={path} class="text-yellow hover:text-red">
     <article class="p-4 post-card-border">
         <h1 class="mb-2">{title}</h1>
         <p class="mb-2 text-gray">{description}</p>

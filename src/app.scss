@@ -27,7 +27,6 @@ nav {
 }
 
 /* shiki */
-
 pre {
     &.shiki {
         @apply px-0;
@@ -113,6 +112,24 @@ pre {
 
 :is(pre.shiki[text="true"], pre.shiki[svelte="true"]) > div.code-container {
     @apply mx-5;
+}
+
+/* prose */
+.prose {
+    & :where(code):not(:where([class~="not-prose"] *)) {
+        &::before,
+        &::after {
+            @apply content-none;
+        }
+    }
+
+    & :where(a):not(:where([class~="not-prose"] *)) {
+        @apply no-underline;
+
+        &:hover {
+            @apply underline text-blue;
+        }
+    }
 }
 
 @layer components {

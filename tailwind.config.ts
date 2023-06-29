@@ -32,7 +32,7 @@ const config: Config = {
                 },
                 yellow: {
                     DEFAULT: "#ffc900",
-                }
+                },
             },
             typography: () => ({
                 "one-monokai": {
@@ -43,7 +43,7 @@ const config: Config = {
                         "--tw-prose-quotes": "#676e7b",
                         "--tw-prose-quote-borders": "var(--tw-prose-quotes)",
                         "--tw-prose-links": "#00b0ff",
-                        "--tw-prose-headings": "#ffc900",
+                        "--tw-prose-headings": "#eceef0",
                         "--tw-prose-pre-bg": "hsl(220, 10%, 15%)",
                         "--tw-prose-bullets": "#ee2c68",
                         "--tw-prose-bold": "var(--tw-prose-body)",
