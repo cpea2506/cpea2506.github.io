@@ -18,7 +18,7 @@
     <div class="flex-items-center flex-1">
         <a href="/" class="flex-items-center mr-4">
             <img alt="avatar" class="h-8 mr-2" src="/images/logo.png" />
-            <b>CPea's Journey</b>
+            <b class="text-red">CPea's Journey</b>
         </a>
         <a class="mr-4" href="/"> Works </a>
         <a class="mr-4" href="/blogs"> Blogs </a>

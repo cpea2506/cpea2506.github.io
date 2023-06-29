@@ -3,7 +3,7 @@
 @tailwind components;
 
 html {
-    @apply scroll-smooth overflow-x-hidden overflow-y-scroll text-white bg-black;
+    @apply scroll-smooth overflow-x-hidden text-white bg-black;
 }
 
 code {
@@ -15,10 +15,10 @@ h1 {
 }
 
 a {
-    @apply no-underline;
+    @apply no-underline text-gray;
 
     &:hover {
-        @apply text-red;
+        @apply text-white;
     }
 }
 
@@ -136,5 +136,9 @@ pre {
 
     .flex-justify-center {
         @apply flex justify-center;
+    }
+
+    .h-screen-content {
+        min-height: calc(100vh - 3.75rem); // minus size of header
     }
 }
