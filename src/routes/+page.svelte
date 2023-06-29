@@ -39,7 +39,7 @@
     />
     <img
         alt="avatar"
-        class="w-52 rounded-full absolute bottom-[73vh] translate-y-1/2 shadow-[0_0_25px] shadow-yellow-100"
+        class="w-52 rounded-full absolute bottom-[73vh] translate-y-1/2 shadow-[0_0_25px] shadow-yellow-100 pointer-events-none"
         src="https://github.com/cpea2506.png"
     />
     <div class="absolute bottom-[16vh] z-10 flex-center gap-2 md:gap-6">
