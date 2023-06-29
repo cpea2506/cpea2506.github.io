@@ -13,7 +13,7 @@
     .wave {
         @apply absolute w-full h-[100px];
 
-        background-image: url(/images/wave.png);
+        background-image: url("$assets/images/wave.png");
         background-size: 1000px 100px;
     }
 

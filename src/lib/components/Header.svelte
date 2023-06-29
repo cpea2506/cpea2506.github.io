@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Logo from "/images/logo.png";
+    import Logo from "$assets/images/logo.png"
     import Icon from "svelte-icons-pack/Icon.svelte";
     import TiSocialGithubCircular from "svelte-icons-pack/ti/TiSocialGithubCircular";
 
