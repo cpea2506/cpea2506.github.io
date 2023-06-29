@@ -1,5 +1,4 @@
 import { json } from "@sveltejs/kit";
-import type { Frontmatter, Post } from "$lib/types";
 
 type Resolver = {
     metadata: Frontmatter;
