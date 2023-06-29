@@ -1,52 +1,47 @@
-<svg
-    class="w-full h-60 max-h-screen"
-    viewBox="0 24 150 28"
-    preserveAspectRatio="none"
->
-    <defs>
-        <path
-            id="gentle-wave"
-            d="M-160 44c30 0 
-    58-18 88-18s
-    58 18 88 18 
-    58-18 88-18 
-    58 18 88 18
-    v44h-352z"
-        />
-    </defs>
-    <g class="parallax">
-        <use href="#gentle-wave" x="50" y="0" fill="#4579e2" />
-        <use href="#gentle-wave" x="50" y="3" fill="#3461c1" />
-        <use href="#gentle-wave" x="50" y="6" fill="#2d55aa" />
-    </g>
-</svg>
+<div class="relative w-full">
+    <div class="wave waving-left opacity-100 bottom-0 z-50" />
+    <div class="wave waving-right opacity-50 bottom-[10px] z-40" />
+    <div class="wave waving-left opacity-20 bottom-[15px] z-30" />
+    <div class="wave wving-right opacity-70 bottom-5 z-40" />
+</div>
 
 <style lang="scss">
-    .parallax > use {
-        animation: move-forever 12s linear infinite;
-
-        &:nth-child(1) {
-            animation-delay: -2s;
-        }
-
-        &:nth-child(2) {
-            animation-delay: -2s;
-            animation-duration: 5s;
-        }
-
-        &:nth-child(3) {
-            animation-delay: -4s;
-            animation-duration: 3s;
-        }
+    @mixin waving($direction) {
+        animation: waving-#{$direction} 4s linear infinite;
     }
 
-    @keyframes move-forever {
+    .wave {
+        @apply absolute w-full h-[100px];
+
+        background-image: url(/images/wave.png);
+        background-size: 1000px 100px;
+    }
+
+    .waving-left {
+        @include waving(left);
+    }
+
+    .waving-right {
+        @include waving(right);
+    }
+
+    @keyframes waving-left {
         0% {
-            transform: translate(-90px, 0%);
+            background-position-x: 1000px;
         }
 
         100% {
-            transform: translate(85px, 0%);
+            background-position-x: 0px;
+        }
+    }
+
+    @keyframes waving-right {
+        0% {
+            background-position-x: 0px;
+        }
+
+        100% {
+            background-position-x: 1000px;
         }
     }
 </style>
