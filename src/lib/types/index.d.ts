@@ -8,3 +8,8 @@ declare type Post = {
     meta: Frontmatter;
     path: string;
 };
+
+declare type LanguageProps = {
+    src: string;
+    alt: string;
+};
