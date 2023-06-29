@@ -29,7 +29,6 @@
         { alt: "Svelte", src: SvelteLogo },
         { alt: "Shell", src: ShellLogo },
     ]);
-
 </script>
 
 <div class="relative flex flex-col justify-end items-center h-screen-content">
