@@ -2,21 +2,22 @@
     import Icon from "svelte-icons-pack/Icon.svelte";
     import TiSocialGithubCircular from "svelte-icons-pack/ti/TiSocialGithubCircular";
 
-    let color = "#d7d7ff";
+    const defaultIconColor = "#9ca3b2";
+    let iconColor = defaultIconColor;
 
     function handleIconMouseOver() {
-        color = "#e06c75";
+        iconColor = "#eceef0";
     }
 
     function handleIconMouseOut() {
-        color = "#d7d7ff";
+        iconColor = defaultIconColor;
     }
 </script>
 
-<nav class="h-[3.75rem] sticky top-0 z-[2] py-2 px-4">
+<nav class="h-[3.75rem] sticky top-0 z-10 py-2 px-4">
     <div class="flex-items-center flex-1">
         <a href="/" class="flex-items-center mr-4">
-            <img alt="Captain face" class="h-8 mr-2" src="/images/logo.png" />
+            <img alt="avatar" class="h-8 mr-2" src="/images/logo.png" />
             <b>CPea's Journey</b>
         </a>
         <a class="mr-4" href="/"> Works </a>
@@ -31,6 +32,11 @@
         on:mouseout={handleIconMouseOut}
         on:blur={handleIconMouseOut}
     >
-        <Icon src={TiSocialGithubCircular} size="2em" title="Github" {color} />
+        <Icon
+            src={TiSocialGithubCircular}
+            size="2em"
+            title="Github"
+            color={iconColor}
+        />
     </a>
 </nav>

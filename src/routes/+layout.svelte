@@ -6,10 +6,10 @@
 
     export let data: LayoutData;
 
-    $: ({ currentRoute } = data);
+    $: ({ route } = data);
 </script>
 
 <Header />
-<PageTransition url={currentRoute}>
+<PageTransition url={route}>
     <slot />
 </PageTransition>

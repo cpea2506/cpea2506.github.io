@@ -1,10 +1,10 @@
-export type Frontmatter = {
+declare type Frontmatter = {
     title: string;
     description: string;
     date: string;
 };
 
-export type Post = {
+declare type Post = {
     meta: Frontmatter;
     path: string;
 };

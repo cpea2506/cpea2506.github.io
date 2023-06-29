@@ -1,7 +1,7 @@
 import type { LayoutLoad } from "./$types";
 
 export const load: LayoutLoad = ({ url }) => {
-    const currentRoute = url.pathname;
+    const route = url.pathname;
 
-    return { currentRoute };
+    return { route };
 };
