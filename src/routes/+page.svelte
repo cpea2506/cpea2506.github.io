@@ -22,17 +22,17 @@
     ]);
 </script>
 
-<div class="relative flex flex-col justify-end items-center h-screen-content">
+<div class="h-screen-content relative flex flex-col items-center justify-end">
     <img
         src={Stars}
         alt="stars"
-        class="absolute bottom-0 left-0 w-screen h-screen pointer-events-none mix-blend-screen"
+        class="pointer-events-none absolute bottom-0 left-0 h-screen w-screen mix-blend-screen"
     />
     <Avatar
         src="https://github.com/cpea2506.png"
         class="absolute bottom-[73vh] translate-y-1/2 shadow-[0_0_25px] shadow-yellow-100"
     />
-    <div class="absolute bottom-[16vh] z-10 flex-center gap-2 md:gap-6">
+    <div class="flex-center absolute bottom-[16vh] z-10 gap-2 md:gap-6">
         {#each favoriteLanguages as { src, alt }, pos}
             <Language {alt} {src} {pos} />
         {/each}
@@ -40,7 +40,7 @@
     <img
         src={Island}
         alt="island"
-        class="absolute left-1/2 -translate-x-1/2 w-[800px] pointer-events-none bottom-0"
+        class="pointer-events-none absolute bottom-0 left-1/2 w-[800px] -translate-x-1/2"
     />
     <DeepBlueSea />
 </div>

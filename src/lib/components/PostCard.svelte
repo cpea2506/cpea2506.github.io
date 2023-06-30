@@ -6,9 +6,9 @@
 </script>
 
 <a href={path} class="text-yellow/[.85] hover:text-yellow">
-    <article class="p-4 post-card-border">
+    <article class="post-card-border p-4">
         <h1 class="mb-2">{title}</h1>
-        <p class="mb-2 text-gray">{description}</p>
+        <p class="text-gray mb-2">{description}</p>
         <p class="text-green">Created: {date}</p>
     </article>
 </a>

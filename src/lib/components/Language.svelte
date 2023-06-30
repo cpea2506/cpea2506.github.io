@@ -11,7 +11,7 @@
 </script>
 
 <img
-    class="{$$props.class} shadow-[0_0_15px] shadow-white rounded-full max-w-full h-auto transition {animation}"
+    class="{$$props.class} h-auto max-w-full rounded-full shadow-[0_0_15px] shadow-white transition {animation}"
     width="64"
     height="64"
     {alt}

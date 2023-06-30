@@ -21,12 +21,12 @@
         in:fade
         alt="avatar"
         loading="lazy"
-        class="w-52 rounded-full pointer-events-none {$$props.class}"
+        class="pointer-events-none w-52 rounded-full {$$props.class}"
         {src}
     />
 {:else}
     <div
         out:blur
-        class="w-52 h-52 rounded-full animate-pulse bg-yellow-50/50 {$$props.class}"
+        class="h-52 w-52 animate-pulse rounded-full bg-yellow-50/50 {$$props.class}"
     />
 {/if}

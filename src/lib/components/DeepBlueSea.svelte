@@ -1,8 +1,8 @@
 <div class="relative w-full">
-    <div class="wave waving-left opacity-100 bottom-0 z-50" />
-    <div class="wave waving-right opacity-50 bottom-[10px] z-40" />
-    <div class="wave waving-left opacity-20 bottom-[15px] z-30" />
-    <div class="wave wving-right opacity-70 bottom-5 z-40" />
+    <div class="wave waving-left bottom-0 z-50 opacity-100" />
+    <div class="wave waving-right bottom-[10px] z-40 opacity-50" />
+    <div class="wave waving-left bottom-[15px] z-30 opacity-20" />
+    <div class="wave wving-right bottom-5 z-40 opacity-70" />
 </div>
 
 <style lang="scss">
@@ -11,7 +11,7 @@
     }
 
     .wave {
-        @apply absolute w-full h-[100px];
+        @apply absolute h-[100px] w-full;
 
         background-image: url("$assets/images/wave.png");
         background-size: 1000px 100px;
