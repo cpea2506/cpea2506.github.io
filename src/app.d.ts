@@ -4,6 +4,10 @@
 declare namespace App {
     // interface Locals {}
     // interface Platform {}
+    interface PageData {
+        repos: GitHubRepo[];
+        languages: GitHubLanguages;
+    }
     // interface PrivateEnv {}
     // interface PublicEnv {}
     // interface Session {}
