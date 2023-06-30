@@ -22,8 +22,21 @@ declare type GitHubRepo = {
     stargazers_count: number;
     forks_count: number;
     language: string;
+    fork: boolean;
+    topics: string[];
+    pushed_at: Date;
 };
 
 declare type GitHubLanguages = {
     [key: string]: { color: string };
+};
+
+declare type RepoCategory = {
+    games: GitHubRepo[];
+    apple: GitHubRepo[];
+    dotfiles: GitHubRepo[];
+    neovim: GitHubRepo[];
+    problemSolving: GitHubRepo[];
+    externalContributions: GitHubRepo[];
+    others: GitHubRepo[];
 };

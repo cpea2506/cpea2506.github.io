@@ -21,7 +21,9 @@
 
 <div class="m-1 flex font-medium">
     <div class="flex grow">
-        <Icon src={Star} color="#ffc900">{stargazersCount}</Icon>
+        <Icon src={Star} color={stargazersCount > 0 ? "#ffc900" : "#eceef0"}
+            >{stargazersCount}</Icon
+        >
         <Icon src={RepoForked} color="#eceef0">{forksCount}</Icon>
         <Icon src={Gear} color="#9ca3b2">
             {sizeStr}

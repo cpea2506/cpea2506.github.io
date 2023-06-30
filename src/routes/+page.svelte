@@ -9,7 +9,7 @@
     import CsharpLogo from "$assets/images/languages/csharp.png";
     import SvelteLogo from "$assets/images/languages/svelte.png";
     import ShellLogo from "$assets/images/languages/shell.png";
-    import { shuffle } from "$utils/arrays";
+    import { shuffle } from "$utils";
     import Avatar from "$components/Avatar.svelte";
 
     const favoriteLanguages: LanguageProps[] = shuffle([

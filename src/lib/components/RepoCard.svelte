@@ -1,5 +1,6 @@
 <script lang="ts">
     import RepoMetaData from "$components/RepoMetaData.svelte";
+    import GradientText from "$components/GradientText.svelte";
 
     export let href: string;
     export let name: string;
@@ -11,17 +12,16 @@
 </script>
 
 <div
-    class="hover:shadow-blue/25 flex flex-col justify-between rounded-md bg-white/5 shadow-lg transition-colors"
+    class="hover:shadow-blue/25 border-blue/25 flex flex-col justify-between rounded-md border bg-white/5 shadow-lg transition-colors"
 >
     <div
         class="h-full rounded-t-md bg-white/10 p-2 pl-5 transition-colors hover:bg-white/20"
     >
         <div class="flex flex-col gap-1">
-            <a
-                {href}
-                class="hover:animate-text hover:from-green hover:via-yellow hover:to-red font-bold tracking-wide text-white hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent md:text-base"
-            >
-                {name}
+            <a {href}>
+                <GradientText hover>
+                    {name}
+                </GradientText>
             </a>
             {#if description}
                 <span class="text-xs font-medium tracking-wide md:text-sm">
