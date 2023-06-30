@@ -1,5 +1,5 @@
 "*.{ts,svelte,scss,md,json}":
-    - "pnpm format"
-    - "pnpm lint:format"
-"*.{ts,svelte}": "pnpm lint"
-"*.scss": pnpm lint:style
+    - prettier --write
+    - eslint --fix
+"*.{ts,svelte}": eslint --fix
+"*.scss": stylelint --fix
