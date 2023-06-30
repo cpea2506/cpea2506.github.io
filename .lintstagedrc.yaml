@@ -1,5 +1,10 @@
-"*.{ts,svelte,scss,md,json}":
+"*.{ts,svelte}":
     - prettier --write
     - eslint --fix
-"*.{ts,svelte}": eslint --fix
-"*.scss": stylelint --fix
+"*.{md,json}": prettier --write
+"*.svete":
+    - pnpm check
+    - stylelint --fix
+"*.scss":
+    - prettier --write
+    - stylelint --fix
