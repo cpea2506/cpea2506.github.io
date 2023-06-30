@@ -4,7 +4,7 @@
 </script>
 
 <img
-    class="{$$props.class} shadow-[0_0_15px] shadow-white rounded-full max-w-full h-auto transition hover:scale-125"
+    class="{$$props.class} shadow-[0_0_15px] shadow-white rounded-full max-w-full h-auto transition hover:animate-bounce"
     width="64"
     height="64"
     {alt}

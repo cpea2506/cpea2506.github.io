@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { fly } from "svelte/transition";
+    import { fly, fade } from "svelte/transition";
 
     const duration = 450;
 
@@ -7,10 +7,7 @@
 </script>
 
 {#key url}
-    <div
-        in:fly={{ x: -5, duration, delay: duration }}
-        out:fly={{ x: 5, duration }}
-    >
+    <div in:fade={{ duration, delay: duration }} out:fly={{ x: 5, duration }}>
         <slot />
     </div>
 {/key}
