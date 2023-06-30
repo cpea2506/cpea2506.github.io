@@ -10,6 +10,7 @@
     import SvelteLogo from "$assets/images/languages/svelte.png";
     import ShellLogo from "$assets/images/languages/shell.png";
     import { shuffle } from "$utils/arrays";
+    import Avatar from "$components/Avatar.svelte";
 
     const favoriteLanguages: LanguageProps[] = shuffle([
         { alt: "Rust", src: RustLogo },
@@ -27,10 +28,9 @@
         alt="stars"
         class="absolute bottom-0 left-0 w-screen h-screen pointer-events-none mix-blend-screen"
     />
-    <img
-        alt="avatar"
-        class="w-52 rounded-full absolute bottom-[73vh] translate-y-1/2 shadow-[0_0_25px] shadow-yellow-100 pointer-events-none"
+    <Avatar
         src="https://github.com/cpea2506.png"
+        class="absolute bottom-[73vh] translate-y-1/2 shadow-[0_0_25px] shadow-yellow-100"
     />
     <div class="absolute bottom-[16vh] z-10 flex-center gap-2 md:gap-6">
         {#each favoriteLanguages as { src, alt }, pos}

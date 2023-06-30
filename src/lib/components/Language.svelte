@@ -4,7 +4,10 @@
     export let src: string;
     export let alt: string;
 
-    let animation = shuffle(["hover:animate-spin", "hover:animate-bounce"])[0];
+    const animation = shuffle([
+        "hover:animate-spin",
+        "hover:animate-bounce",
+    ])[0];
 </script>
 
 <img
