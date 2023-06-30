@@ -1,2 +1,5 @@
-"*.{ts,svelte,scss,md,json}": "pnpm format"
+"*.{ts,svelte,scss,md,json}":
+    - "pnpm format"
+    - "pnpm lint:format"
 "*.{ts,svelte}": "pnpm lint"
+"*.scss": pnpm lint:style

@@ -9,17 +9,7 @@
     import CsharpLogo from "$assets/images/languages/csharp.png";
     import SvelteLogo from "$assets/images/languages/svelte.png";
     import ShellLogo from "$assets/images/languages/shell.png";
-
-    // Durstenfeld shuffle algorithm
-    function shuffle(array: LanguageProps[]) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-
-        return array;
-    }
+    import { shuffle } from "$utils/arrays";
 
     const favoriteLanguages: LanguageProps[] = shuffle([
         { alt: "Rust", src: RustLogo },
@@ -43,8 +33,8 @@
         src="https://github.com/cpea2506.png"
     />
     <div class="absolute bottom-[16vh] z-10 flex-center gap-2 md:gap-6">
-        {#each favoriteLanguages as { src, alt }}
-            <Language {alt} {src} />
+        {#each favoriteLanguages as { src, alt }, pos}
+            <Language {alt} {src} {pos} />
         {/each}
     </div>
     <img
