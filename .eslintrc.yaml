@@ -4,22 +4,31 @@ extends:
     - eslint:recommended
     - plugin:@typescript-eslint/recommended
     - plugin:svelte/recommended
-    - prettier
+    - plugin:svelte/prettier
 plugins:
     - "@typescript-eslint"
-overrides:
-    - files: ["*.svelte"]
-      parser: svelte-eslint-parser
-      parserOptions:
-          parser: "@typescript-eslint/parser"
-parserOptions:
-    sourceType: module
-    ecmaVersion: latest
-    extraFileExtensions: [.svelte]
 env:
     es2022: true
     browser: true
     node: true
+parserOptions:
+    sourceType: "module"
+    ecmaVersion: latest
+    extraFileExtensions:
+        - ".svelte"
+overrides:
+    - files:
+          - "*.svelte"
+      parser: svelte-eslint-parser
+      parserOptions:
+          parser: "@typescript-eslint/parser"
 rules:
     no-undef: 0
+    "@typescript-eslint/no-unused-vars":
+        - warn
+        - {
+              varsIgnorePattern: ^_,
+              argsIgnorePattern: ^_,
+              destructuredArrayIgnorePattern: ^_,
+          }
     "@typescript-eslint/no-explicit-any": 0
