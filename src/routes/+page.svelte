@@ -1,7 +1,6 @@
 <script lang="ts">
     import DeepBlueSea from "$components/DeepBlueSea.svelte";
     import Language from "$components/Language.svelte";
-    import Stars from "$assets/images/stars.jpg";
     import Island from "$assets/images/island.png";
     import RustLogo from "$assets/images/languages/rust.png";
     import SwiftLogo from "$assets/images/languages/swift.png";
@@ -23,11 +22,6 @@
 </script>
 
 <div class="h-screen-content relative flex flex-col items-center justify-end">
-    <img
-        src={Stars}
-        alt="stars"
-        class="pointer-events-none absolute bottom-0 left-0 h-screen w-screen mix-blend-screen"
-    />
     <Avatar
         src="https://github.com/cpea2506.png"
         class="absolute bottom-[73vh] translate-y-1/2 shadow-[0_0_25px] shadow-yellow-100"
