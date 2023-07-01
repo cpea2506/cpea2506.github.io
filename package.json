@@ -18,6 +18,7 @@
         "_deploy": "pnpm build && gh-pages -d build -t"
     },
     "devDependencies": {
+        "@steeze-ui/octicons": "^2.1.0",
         "@sveltejs/adapter-static": "2.0.2",
         "@sveltejs/kit": "^1.21.0",
         "@tailwindcss/typography": "^0.5.9",
@@ -50,7 +51,7 @@
         "vite": "^4.3.9"
     },
     "dependencies": {
-        "svelte-icons-pack": "^2.1.0"
+        "@steeze-ui/svelte-icon": "^1.5.0"
     },
     "type": "module"
 }

@@ -1,11 +1,8 @@
 <script lang="ts">
     import { page } from "$app/stores";
     import Icon from "$components/Icon.svelte";
-    import Star from "svelte-icons-pack/ai/AiFillStar";
-    import GitHub from "svelte-icons-pack/fa/FaBrandsGithub";
-    import RepoForked from "svelte-icons-pack/vsc/VscRepoForked";
-    import Gear from "svelte-icons-pack/bs/BsGearFill";
-    import Circle from "svelte-icons-pack/fa/FaSolidCircle";
+    import GitHubIcon from "./GitHubIcon.svelte";
+    import { StarFill, RepoForked, Gear, DotFill } from "@steeze-ui/octicons";
 
     export let href: string;
     export let stargazersCount: number;
@@ -21,7 +18,7 @@
 
 <div class="m-1 flex font-medium">
     <div class="flex grow">
-        <Icon src={Star} color={stargazersCount > 0 ? "#ffc900" : "#eceef0"}
+        <Icon src={StarFill} color={stargazersCount > 0 ? "#ffc900" : "#eceef0"}
             >{stargazersCount}</Icon
         >
         <Icon src={RepoForked} color="#eceef0">{forksCount}</Icon>
@@ -29,12 +26,12 @@
             {sizeStr}
         </Icon>
         {#if languageColor}
-            <Icon src={Circle} color={languageColor}>
+            <Icon src={DotFill} color={languageColor}>
                 {language}
             </Icon>
         {/if}
     </div>
     <a class="flex-items-center mr-2 gap-1" {href} target="_blank">
-        <Icon src={GitHub} color="#eceef0" />
+        <GitHubIcon />
     </a>
 </div>
