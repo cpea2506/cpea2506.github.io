@@ -7,6 +7,7 @@
         "dev": "pnpm tsc && vite dev",
         "build": "pnpm tsc && vite build",
         "package": "svelte-kit package",
+        "prepare": "husky install",
         "preview": "pnpm tsc && vite preview",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
