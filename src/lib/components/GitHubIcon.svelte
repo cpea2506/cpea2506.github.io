@@ -2,7 +2,7 @@
     import Icon from "$components/Icon.svelte";
     import { MarkGithub } from "@steeze-ui/octicons";
 
-    export let size: string;
+    export let size: string | undefined = undefined;
 
     let hovered = false;
 
