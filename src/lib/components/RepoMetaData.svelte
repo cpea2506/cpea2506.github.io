@@ -11,9 +11,6 @@
     export let language: string;
 
     const languageColor = $page.data.languages[language]?.color;
-
-    const sizeStr =
-        size / 1000 > 1 ? `${Math.floor(size / 1000)} mb` : `${size} kb`;
 </script>
 
 <div class="m-1 flex font-medium">
@@ -23,7 +20,7 @@
         >
         <Icon src={RepoForked} color="#eceef0">{forksCount}</Icon>
         <Icon src={Gear} color="#9ca3b2">
-            {sizeStr}
+            {size / 1000 > 1 ? `${Math.floor(size / 1000)} mb` : `${size} kb`}
         </Icon>
         {#if languageColor}
             <Icon src={DotFill} color={languageColor}>
