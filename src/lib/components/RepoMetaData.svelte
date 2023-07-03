@@ -10,7 +10,8 @@
     export let size: number;
     export let language: string;
 
-    const languageColor = $page.data.languages[language]?.color;
+    const languages = $page.data.languages;
+    const languageColor = languages && languages[language]?.color;
 </script>
 
 <div class="m-1 flex font-medium">

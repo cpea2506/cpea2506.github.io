@@ -1,9 +1,11 @@
 <script lang="ts">
     import RepoByCategory from "$components/RepoByCategory.svelte";
-    import { page } from "$app/stores";
+    import type { PageData } from "./$types";
     import { isForked, madeByOwn } from "$utils";
 
-    const repos = $page.data.repos;
+    export let data: PageData;
+
+    $: ({ repos } = data);
 
     const category: RepoCategory = {
         games: [],
