@@ -1,0 +1,9 @@
+[build]
+release = true
+
+[serve]
+port = 3000
+open = true
+
+[clean]
+cargo = true
