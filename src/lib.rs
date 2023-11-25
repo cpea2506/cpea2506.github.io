@@ -16,7 +16,6 @@ pub fn App() -> impl IntoView {
         Language::new("assets/images/languages/shell.png", "Shell"),
         Language::new("assets/images/languages/lua.png", "Lua"),
     ];
-
     favorite_languages.shuffle(&mut rand::thread_rng());
 
     view! {
