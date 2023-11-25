@@ -14,7 +14,7 @@ pub fn Avatar(
         {move || {
             if is_loaded() {
                 view! {
-                    <a href=link.clone() class=format!("w-52 rounded-full")>
+                    <a href=link.clone() class="w-52 rounded-full">
                         <img alt="avatar" loading="lazy" src=src.clone() class=format!("w-52 rounded-full {class}")/>
                     </a>
                 }
